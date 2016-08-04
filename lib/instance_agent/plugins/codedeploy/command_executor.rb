@@ -235,7 +235,7 @@ module InstanceAgent
             format = 'tarball'
           end
 
-          uri = URI.parse("https://api.github.com/repos/#{account}/#{repo}/#{format}/#{commit}")
+          uri = URI.parse("https://api.github.com/repos/#{account}/#{repo}/#{format}")
           options = {:ssl_verify_mode => OpenSSL::SSL::VERIFY_PEER, :redirect => true, :ssl_ca_cert => ENV['AWS_SSL_CA_DIRECTORY']}
 
           if anonymous
